@@ -1,2 +1,2 @@
 # thespaceburrito.github.io
-web portfolio hosting
+web hosting
