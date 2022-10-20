@@ -9,20 +9,23 @@ body {
     background-position: bottom;
     padding-bottom: 100px;
     position: relative;
-    z-index: 10!important;
+    z-index: 10 !important;
 }
+
 .white {
-  color: white!important;
+    color: white !important;
 }
-.Beverages {
+
+.drinks {
     color: white;
     background: url("../../assets/img/Beverages.jpg") no-repeat;
     background-size: cover;
     background-position: bottom;
     padding-bottom: 100px;
     position: relative;
-    z-index: 10!important;
+    z-index: 10 !important;
 }
+
 .menu {
     color: white;
     background: url("../../assets/img/Gourmet.jpg") no-repeat;
@@ -30,23 +33,24 @@ body {
     background-position: bottom;
     padding-bottom: 100px;
     position: relative;
-    z-index: 10!important;
+    z-index: 10 !important;
 }
-.price{
-  color: lightblue;
-  font-weight: bold;
-  font-size: 17px;
+
+.price {
+    color: lightblue;
+    font-weight: bold;
+    font-size: 17px;
 }
 
 @font-face {
     font-family: 'Playlist-Script';
-    src:url('../../assets/fonts/Playlist Script.otf') format('opentype');
-  }
+    src: url('../../assets/fonts/Playlist Script.otf') format('opentype');
+}
 
 .hashtag {
-  font-family: 'Playlist-Script';
-  font-size: 100px!important;
-  color: skyblue!important;
+    font-family: 'Playlist-Script';
+    font-size: 100px !important;
+    color: skyblue !important;
 }
 
 .home .navbar-nav>li>a {
@@ -60,7 +64,7 @@ body {
     padding-top: 20px;
     padding-bottom: 20px;
     width: 100%;
-    border-bottom:none;
+    border-bottom: none;
     background-color: transparent;
     min-width: 300px;
     border: none;
@@ -84,7 +88,7 @@ body {
 }
 
 .home .navbar-nav {
-   margin-top: 12px;
+    margin-top: 12px;
 }
 
 .home .navbar-toggle {
@@ -135,33 +139,34 @@ body {
     color: #fff;
     background-color: transparent;
     border-color: #fffbfb !important;
-    outline:none;
+    outline: none;
     margin-right: 20px;
     margin-top: 20px;
     font-size: 24px;
     padding: 18px 24px;
-    transition:0.2s background-color;
+    transition: 0.2s background-color;
 }
-.firstlinks{
-  color: #fff;
+
+.firstlinks {
+    color: #fff;
 }
 
 .home .btn-primary:hover {
-    background-color:rgba(255,255,255,0.1);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .home .btn-primary:active {
-    transform:translateY(1px);
+    transform: translateY(1px);
 }
 
 @media screen and (max-width: 767px) {
 
-    .home .navbar-default .navbar-nav .open .dropdown-menu>li>a{
+    .home .navbar-default .navbar-nav .open .dropdown-menu>li>a {
         color: #fff;
         font-size: 16px;
     }
 
-    .home .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover{
+    .home .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
         color: #ccc;
     }
 
@@ -171,12 +176,12 @@ body {
         box-shadow: none;
     }
 
-    .home .hero{
+    .home .hero {
         margin-top: 40px;
         margin-bottom: 40px;
     }
 
-    .home .hero h1{
+    .home .hero h1 {
         font-size: 42px;
     }
 }
