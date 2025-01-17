@@ -1,314 +1,270 @@
+/* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    color: #000;
-    background: rgba(255, 255, 255, 0.95) url('images/SPLASH WATERMARK.png') no-repeat fixed bottom right / 45%;
-    background-blend-mode: lighten;
-    margin-bottom: 10px;
-    
+  font-family: 'Montserrat', sans-serif;
+  color: #000;
+  background: rgba(255, 255, 255, 0.95) url('images/SPLASH WATERMARK.png') no-repeat fixed bottom right / 45%;
+  background-blend-mode: lighten;
+  margin-bottom: 10px;
 }
 
 /* Base Grid Parent */
 .parent {
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    gap: 10px;
-  }
-  
-  /*  Box 1: Hero */
-  .box-1 {
-    grid-column: 1 / 11; 
-    grid-row: 1 / 5;  
-    position: relative;
-    z-index: 1; 
-    background-color: #ccc;
-  }
-  
-  /* Box 2: Video */
-  .box-2 {
-    grid-column: 4 / 8;
-    grid-row: 4 / 6;
-    position: relative;
-    z-index: 2;
-    margin-top: -50px;
-    height: 0;
-    padding-bottom: 56.25%;
-    overflow: hidden;
-    box-shadow: 0px 5px 20px rgba(0,0,0);
-  }
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 10px;
+}
 
-  .box-2 iframe {
-    position: absolute;
+/* Hero Section */
+header.box-1 {
+  grid-column: 1 / 11;
+  grid-row: 1 / 5;
+  position: relative;
+  z-index: 1;
+  background-color: #ccc;
+}
+
+.hero {
+  background: rgba(0, 0, 0, .35) url('images/HERO 1.jpg') center/cover no-repeat;
+  background-blend-mode: darken;
+  height: 78vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: calc(7rem + 1vw);
+  color: #de041c;
+  padding: 0 10px;
+}
+
+.hero h2 {
+  font-size: calc(3.7rem + 1vw);
+  color: #fff;
+  padding: 0 10px;
+}
+
+.hero p {
+  margin-top: 2rem;
+  font-size: calc(0.5rem + 0.5vw);
+  max-width: 800px;
+  font-optical-sizing: auto;
+  font-variation-settings: 'wght' 500;
+  padding: 0 10px;
+}
+
+.red-block {
+  height: 55px;
+  background-color: #de041c;
+  width: 100%;
+}
+
+/* Video Section */
+section.box-2 {
+  grid-column: 4 / 8;
+  grid-row: 4 / 6;
+  position: relative;
+  z-index: 2;
+  margin-top: -50px;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0);
+}
+
+.box-2 iframe {
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  border: 0; 
-  
-   
-  }
-  
-  
-  /* Box 3: Left side */
-  .box-3 {
-    grid-column: 1 / 4; 
-    grid-row: 5 / 10;  
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-
-  }
-  .img-1  {
-    max-width: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
-
-  /* Handle flex of Image 4 and Image 5 */
-  .image-box{ 
-    display: flex;
-    flex-wrap: nowrap;
-    max-width: 100%;
-    width: 100%;
-    gap: 10px;
-  }
-
-  .img-5 {
-    flex: 1 1 33.333%;
-    max-width: calc(33.333% - 6.67px);
-    height: auto; 
-
-  }
-
-  .img-4 {
-    flex: 2 1 66.667%; 
-    max-width: calc(66.667% - 3.33px);
-    height: auto;
-  }
-
-  .img-4, .img-5 {
-    object-fit: cover;
-  }
-  
-  /* Box 4: Middle Bottom */
-  .box-4 {
-    grid-column: 4 / 6; 
-    grid-row: 6 ; 
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  .img-2, .img-3 {
-    max-width: 100%;
-    object-fit: cover;
-  }
-  
-  /* Box 5: Copy Content */
-  .box-5 {
-    grid-column: 6 / 11; 
-    grid-row: 6 ;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 25px;
-    padding: 65px 0 0 65px;
-  }
-  
-/* Content Styling */
-
-.hero {
-    background: rgba(0, 0, 0, .35) url('images/HERO 1.jpg') center/cover no-repeat;
-    background-blend-mode: darken;
-    height: 78vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    text-align: center;
-    position: relative;
-    
+  border: 0;
 }
 
-.hero h1 {
-    font-size: calc(7rem + 1vw);
-    color: #de041c;
-    padding: 0 10px 0 10px;
+/* Right Collage (Aside) */
+aside.box-3 {
+  grid-column: 1 / 4;
+  grid-row: 5 / 10;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.hero h2 {
-    font-size: calc(3.7rem + 1vw);
-    color: #fff;
-    padding: 0 10px 0 10px;
-   
+.img-1 {
+  max-width: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
-.hero p {
-    margin-top: 2rem;
-    font-size: calc(0.5rem + 0.5vw);
-    max-width: 800px;
-    font-optical-sizing: auto;
-    font-variation-settings: 'wght' 500;
-    padding: 0 10px 0 10px;
+.image-box {
+  display: flex;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  width: 100%;
+  gap: 10px;
 }
 
-
-.red-block {
-    height: 55px;
-    background-color: #de041c;
-    width: 100%;
+.img-5 {
+  flex: 1 1 33.333%;
+  max-width: calc(33.333% - 6.67px);
+  height: auto;
 }
 
-.title, .copy-title { 
-    line-height: 0.8;
-    font-optical-sizing: auto;
-    font-variation-settings: 'wght' 900;
-    text-transform: uppercase;
+.img-4 {
+  flex: 2 1 66.667%;
+  max-width: calc(66.667% - 3.33px);
+  height: auto;
 }
 
-.title {
-    text-wrap: nowrap;
+.img-4, .img-5 {
+  object-fit: cover;
+}
+
+/* Middle Collage */
+section.box-4 {
+  grid-column: 4 / 6;
+  grid-row: 6;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.img-2, .img-3 {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+/* Copy Content Section */
+section.box-5 {
+  grid-column: 6 / 11;
+  grid-row: 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+  padding: 65px 0 0 65px;
 }
 
 .copy-title h3 {
-    font-size: calc(0.7rem + 1vw);
+  font-size: calc(0.7rem + 1vw);
 }
 
 .copy-title h2 {
-    font-size: calc(1.8rem + 1vw);
-    color: #de041c;
+  font-size: calc(1.8rem + 1vw);
+  color: #de041c;
 }
 
 .box-5 p {
-   padding-right: 150px;
-   font-size: 0.8rem;
-   font-variation-settings: 'wght' 500;
+  padding-right: 150px;
+  font-size: 0.8rem;
+  font-variation-settings: 'wght' 500;
 }
 
 .box-5 p:nth-of-type(3) {
-    color: #de041c;
-    margin-bottom: 20px;
-    font-variation-settings: 'wght' 900;
-  }
+  color: #de041c;
+  margin-bottom: 20px;
+  font-variation-settings: 'wght' 900;
+}
 
-  
-/* RESPONSIVE: Large Screens  (max-width: 1024px) */
-  
+/* Responsive Design */
 
+/* Large Screens (max-width: 1024px) */
 @media screen and (max-width: 1024px) {
-    body {
-        background-size: 90%;
-    }
-    .parent {
+  body {
+      background-size: 90%;
+  }
+  .parent {
       grid-template-columns: 1fr;
       grid-template-rows: auto;
-    }
-  
-    /* Stack everything vertically */
-    .box-1, .box-2, .box-3, .box-4, .box-5 {
+  }
+
+  header.box-1, section.box-2, aside.box-3, section.box-4, section.box-5 {
       grid-column: 1 / -1;
       grid-row: auto;
       position: relative;
       margin-top: 0;
       z-index: auto;
-    }
+  }
 
-    .box-5 {
-        margin: 50px 0 50px 0;
-    }
-
+  section.box-5 {
+      margin: 50px 0;
+  }
 
   .hero h1 {
       font-size: calc(5rem + 1vw);
   }
-  
+
   .hero h2 {
       font-size: calc(2.6rem + 1vw);
-     
   }
-  
+
   .hero p {
       font-size: calc(0.5rem + 0.5vw);
       max-width: 600px;
   }
+}
 
-    
-    
+/* Medium Screens (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  .hero h1 {
+      font-size: calc(2.6rem + 1vw);
+      color: #de041c;
   }
 
-  
-/* RESPONSIVE: Medium Screens  (max-width: 768px) */
+  .hero h2 {
+      font-size: calc(1.4rem + 1vw);
+      color: #fff;
+  }
 
-@media screen and (max-width: 768px) {
+  .hero p {
+      max-width: 320px;
+  }
 
+  section.box-5 {
+      padding: 0 0 0 40px;
+  }
 
-
-  .hero h1 {
-    font-size: calc(2.6rem + 1vw);
-    color: #de041c;
+  section.box-5 p {
+      padding-right: 50px;
+  }
 }
 
-.hero h2 {
-    font-size: calc(1.4rem + 1vw);
-    color: #fff;
-   
-}
-
-.hero p {
-    max-width: 320px;
-}
-
-.box-5 {
-  padding: 0 0 0 40px;
-}
-
-.box-5 p {
-  padding-right: 50px;
-}
-  
-}
-
-/* RESPONSIVE: Medium Screens  (max-width: 480px) */
-
+/* Small Screens (max-width: 480px) */
 @media screen and (max-width: 480px) {
-
-  
-
-
   .hero h1 {
-    font-size: calc(2.6rem + 1vw);
-    color: #de041c;
+      font-size: calc(2.6rem + 1vw);
+      color: #de041c;
+  }
+
+  .hero h2 {
+      font-size: calc(1.4rem + 1vw);
+      color: #fff;
+  }
+
+  .hero p {
+      max-width: 320px;
+  }
+
+  .copy-title h3 {
+      font-size: calc(0.5rem + 1vw);
+  }
+
+  .copy-title h2 {
+      font-size: calc(1.6rem + 1vw);
+      color: #de041c;
+  }
 }
 
-.hero h2 {
-    font-size: calc(1.4rem + 1vw);
-    color: #fff;
-   
-}
-
-.hero p {
-    max-width: 320px;
-}
-
-.copy-title h3 {
-  font-size: calc(0.5rem + 1vw);
-}
-
-.copy-title h2 {
-  font-size: calc(1.6rem + 1vw);
-  color: #de041c;
-}
-
-  
-}
-
-
+/* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
